@@ -1,4 +1,55 @@
-BoxLayoutExample:
+GridLayoutExample:
+
+<GridLayoutExample@GridLayout>:
+    #rows
+    #cols
+    cols: 3
+
+<AnchorLayoutExample>:
+    #right, left, center
+    anchor_x: "center"
+    #bottom, top, center
+    anchor_y: "top"
+    BoxLayout:
+        size_hint: .2, .2
+        Button:
+            text: "A"
+
+        Button:
+            text: "B"
+           #size_hint: .1, .1
+
+<BoxLayoutExample>:
+    orientation: "vertical"
+    Button:
+        text: "A"
+        # size: "480dp"
+        size_hint: .5, None
+
+        #width: "100dp"
+        #height: "60dp"
+
+        #x, center_x, right - x: dich tu trai sang; center_x: dich tu trung tam
+        #right: dich chuyen tu phai sang
+        #y, center_y, top
+        #pos_hint: {"right": .5 }
+    BoxLayout:
+        oriantation: "vertical"
+        spacing: "10dp"
+        Button:
+            text: "B1"
+            #size_hint: 1, 2
+        Button:
+            text: "B2"
+            #size_hint: 1, 2
+        Button:
+            text: "B3"
+            #size_hint: 1, 2
+        Button:
+            text: "B4"
+            #size_hint: 1, 2
+    Label:
+        text: "C"
 
 <MainWidget>:
     Button:
