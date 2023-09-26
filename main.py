@@ -22,6 +22,13 @@ class WidgetsExample(BoxLayout):
         self.count += 1
         self.my_text = str(self.count)
 
+    def On_Toggle_Button(self, widget):
+        print("Status" + widget.state)
+        if widget.state == "normal":
+            widget.text = "OFF"
+        else:
+            widget.text = "ON"
+
 
 class StackLayoutExample(StackLayout):
     def __init__(self, **kwargs):
