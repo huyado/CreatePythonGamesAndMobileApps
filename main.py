@@ -10,7 +10,7 @@ from kivy.uix.anchorlayout import AnchorLayout
 
 
 #class ScrollViewExample(ScrollView):
-#    pass
+#+pass
 
 
 class StackLayoutExample(StackLayout):
@@ -20,8 +20,8 @@ class StackLayoutExample(StackLayout):
         for i in range(0, 100):
             b = Button(text = str(i), size_hint=(None, None), size = (size , size))
             self.add_widget(b)
-class GridLayoutExample(GridLayout):
-    pass
+#class GridLayoutExample(GridLayout):
+#   pass
 
 class AnchorLayoutExample(AnchorLayout):
     pass
