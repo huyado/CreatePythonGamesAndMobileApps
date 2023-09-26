@@ -1,5 +1,6 @@
 from kivy.app import App
 from kivy.metrics import dp
+from kivy.properties import StringProperty
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.stacklayout import StackLayout
 from kivy.uix.widget import Widget
@@ -11,6 +12,15 @@ from kivy.uix.anchorlayout import AnchorLayout
 
 #class ScrollViewExample(ScrollView):
 #+pass
+
+
+class WidgetsExample(BoxLayout):
+    count = 0
+    my_text = StringProperty("0")
+
+    def On_Count_Click(self):
+        self.count += 1
+        self.my_text = str(self.count)
 
 
 class StackLayoutExample(StackLayout):
