@@ -16,18 +16,22 @@ from kivy.uix.anchorlayout import AnchorLayout
 
 class WidgetsExample(BoxLayout):
     count = 0
+    count_enabled = False
     my_text = StringProperty("0")
 
     def On_Count_Click(self):
-        self.count += 1
-        self.my_text = str(self.count)
+        if self.count_enabled == True:
+            self.count += 1
+            self.my_text = str(self.count)
 
     def On_Toggle_Button(self, widget):
-        print("Status" + widget.state)
         if widget.state == "normal":
             widget.text = "OFF"
+            self.count_enabled = False
         else:
             widget.text = "ON"
+            self.count_enabled = True
+
 
 
 class StackLayoutExample(StackLayout):
