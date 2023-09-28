@@ -18,9 +18,10 @@ WidgetsExample:
         font_name: "fonts\Lcd.ttf"
         font_size: "200dp"
         color: 0, 1, .5, 1
-
-
-
+    Switch:
+        on_active: root.On_Active_Switch_Button(self)
+        size_hint: None, 1
+        width: "100dp"
 
 <PageLayoutExample@PageLayout>:
     MainWidget:
@@ -98,6 +99,9 @@ WidgetsExample:
             #size_hint: 1, 2
         Button:
             text: "B4"
+            #size_hint: 1, 2
+        Button:
+            text: "B5"
             #size_hint: 1, 2
     Label:
         text: "C"

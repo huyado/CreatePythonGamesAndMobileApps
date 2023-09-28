@@ -7,11 +7,13 @@ from kivy.uix.widget import Widget
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.uix.anchorlayout import AnchorLayout
-#from kivy.uix.scrollview import ScrollView
 
 
-#class ScrollViewExample(ScrollView):
-#+pass
+# from kivy.uix.scrollview import ScrollView
+
+
+# class ScrollViewExample(ScrollView):
+# +pass
 
 
 class WidgetsExample(BoxLayout):
@@ -20,7 +22,7 @@ class WidgetsExample(BoxLayout):
     my_text = StringProperty("0")
 
     def On_Count_Click(self):
-        if self.count_enabled == True:
+        if self.count_enabled:
             self.count += 1
             self.my_text = str(self.count)
 
@@ -32,6 +34,8 @@ class WidgetsExample(BoxLayout):
             widget.text = "ON"
             self.count_enabled = True
 
+    def On_Active_Switch_Button(self, widget):
+        print("Status:" + str(widget.active))
 
 
 class StackLayoutExample(StackLayout):
@@ -39,9 +43,11 @@ class StackLayoutExample(StackLayout):
         super().__init__(**kwargs)
         size = dp(100)
         for i in range(0, 100):
-            b = Button(text = str(i), size_hint=(None, None), size = (size , size))
+            b = Button(text=str(i), size_hint=(None, None), size=(size, size))
             self.add_widget(b)
-#class GridLayoutExample(GridLayout):
+
+
+# class GridLayoutExample(GridLayout):
 #   pass
 
 class AnchorLayoutExample(AnchorLayout):
@@ -50,6 +56,8 @@ class AnchorLayoutExample(AnchorLayout):
 
 class BoxLayoutExample(BoxLayout):
     pass
+
+
 """    def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.orientation = "vertical"
@@ -62,8 +70,10 @@ class BoxLayoutExample(BoxLayout):
         self.add_widget(b3)
 """
 
+
 class MainWidget(Widget):
     pass
+
 
 class TheLabApp(App):
     pass
