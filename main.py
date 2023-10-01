@@ -15,6 +15,8 @@ from kivy.uix.anchorlayout import AnchorLayout
 # class ScrollViewExample(ScrollView):
 # +pass
 
+class ImagesExample(GridLayout):
+    pass
 
 class WidgetsExample(BoxLayout):
     count = 0
