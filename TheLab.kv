@@ -33,9 +33,13 @@ WidgetsExample:
         on_value: root.On_Active_Slider(self)
         orientation: "vertical"
         disabled: not my_switch.active
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: str(int(my_slider.value))  #slider_value_txt
+        ProgressBar:
+            value: my_slider.value
 
-    Label:
-        text: str(int(my_slider.value))  #slider_value_txt
 
 <PageLayoutExample@PageLayout>:
     MainWidget:
