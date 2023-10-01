@@ -21,7 +21,7 @@ class WidgetsExample(BoxLayout):
     count_enabled = BooleanProperty(False)
     my_text = StringProperty("0")
     slider_value_txt = StringProperty("50")
-
+    text_input_str = StringProperty("")
     def On_Count_Click(self):
         if self.count_enabled:
             self.count += 1
@@ -41,6 +41,8 @@ class WidgetsExample(BoxLayout):
     def On_Active_Slider(self, widget):
        # print("Value: " + str(int(widget.value)))
         self.slider_value_txt = str(int(widget.value))
+    def on_text_validate(self, widget):
+        self.text_input_str = widget.text
 
 class StackLayoutExample(StackLayout):
     def __init__(self, **kwargs):
